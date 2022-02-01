@@ -32,7 +32,12 @@ const cart = [
         price: 7.99
     }
 ]
-
+function totalSum(cart){
+    
+    let priceSum = cart.price[0] + cart.price[1] + cart.price[2]  
+    console.log(priceSum)
+}
+totalSum(cart)
 //CODE HERE
 
 // const summedPrice = cart.reduce(/* CALLBACK HERE */)
@@ -54,7 +59,10 @@ const cart = [
 */
 
 //CODE HERE
+function calcFinalPrice(cartTotal,couponValue,tax) {
+    tax = cartTotal % .06
 
+}
 
 
 //////////////////PROBLEM 3////////////////////
@@ -81,6 +89,8 @@ const cart = [
     TEXT ANSWER HERE
 
 */
+//customer object will take in an items property wich will be a number depending on how many items they have
+// we will also have a membr status which will be a boolena and a discount status which will also be one
 
 /*
     Now, create a customer object following your own
@@ -88,3 +98,9 @@ const cart = [
 */
 
 //CODE HERE
+
+let customer = {
+    items: 0,
+    member: true,
+    coupon: false
+}

@@ -30,7 +30,21 @@
 */
 
 //CODE HERE
+class tickets {
+    constructor(items,orderTime,customerId){
+    let queuedStatus = true
+    function updateStatus(newStatus){
+        if (queuedStatus === true){
+            console.log(`the status for ${customerId}, has been set already`)
+        } else if (queuedStatus === false){
+            queuedStatus = true
+            console.log(`the order for ${customerId} is now set to ${queuedStatus}`)
+        }
 
+
+    }
+    }
+}
 
 
 /*
@@ -45,7 +59,7 @@
 */
 
 //CODE HERE
-
+let firstTicket  = new tickets
 
 /*
     Call the `updateStatus` method on

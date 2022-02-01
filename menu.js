@@ -170,9 +170,8 @@ function hasCheese(tags){
     }
 }
 
- const filteredFood = foodArr.filter(hasCheese())
+ 
 
- filteredFood('cheese')
 
 
 
@@ -217,6 +216,14 @@ function hasCheese(tags){
 
 //CODE HERE
 
+function filterByProperty(property,number,type){
+    let filterArr = []
+    if(foodArr.name === property && foodArr.rating === number && foodArr.category === type ){
+        filterArr.push(foodArr.name)
+    }
+    console.log(filterArr)
+}
+
 
 /*
     Invoke the `filterByProperty` function passing
@@ -226,3 +233,4 @@ function hasCheese(tags){
 */
 
 //CODE HERE
+filterByProperty('cheese',5,'Entree')

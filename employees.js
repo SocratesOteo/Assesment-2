@@ -20,7 +20,13 @@
 */
 
 //CODE HERE
-
+class employee {
+    constructor (name,shifts){
+        function getSchedule(){
+            console.log(`${name} works on ${shifts}`)
+        }
+    }
+}
 
 
 /*
@@ -34,6 +40,7 @@
 */
 
 //CODE HERE
+let empOne = new employee(adam,'3 days a week')
 
 /*
     Call the `getSchedule` method on the
@@ -41,7 +48,7 @@
 */
 
 //CODE HERE
-
+console.log([...empOne.getSchedule()])
 
 /*
     Make a copy of the empOne object
@@ -83,7 +90,18 @@
 */
 
 //CODE HERE
+let empArr = []
+class manager {
+    constructor(name,shifts,employees){
+    function getEmployees(){
+        console.log(`${name} manages ${employees}`)
+    }
+    function addEmployee(emp){
+        empArr.push(emp)
 
+    }
+    }
+}
 
 
 /*
@@ -98,13 +116,13 @@
 */
 
 //CODE HERE
-
+let manager = new manager(name,shifts,empArr)
 
 /*
     Call the `getEmployees` method on the
     `manager` object.  
 */
-
+console.log([...manager.getEmployees()])
 //CODE HERE
 
 /*
@@ -112,7 +130,7 @@
     `manager` object passing in the string 
     'Coach' or whatever name you'd like.
 */
-
+console.log([...manager.addEmployee('adam')])
 //CODE HERE 
 
 /*
@@ -120,5 +138,5 @@
     `manager` object again to confirm 
     that an employee was added.
 */
-
+console.log([...manager.getEmployees()])
 //CODE HERE
