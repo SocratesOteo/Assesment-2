@@ -30,21 +30,24 @@
 */
 
 //CODE HERE
-class tickets {
+class Tickets {
     constructor(items,orderTime,customerId){
-    let queuedStatus = true
-    function updateStatus(newStatus){
-        if (queuedStatus === true){
-            console.log(`the status for ${customerId}, has been set already`)
-        } else if (queuedStatus === false){
-            queuedStatus = true
-            console.log(`the order for ${customerId} is now set to ${queuedStatus}`)
+        this.items = items
+        this.orderTime = orderTime
+        this.customerId = customerId
+        this.queuedStatus = true
+    }
+
+     updateStatus(newStatus){
+        if (this.queuedStatus === true){
+            console.log(`the status for ${this.customerId}, has been set already`)
+        } else if (this.queuedStatus === false){
+            this.queuedStatus = true
+            console.log(`the order for ${this.customerId} is now set to ${this.queuedStatus}`)
         }
-
-
-    }
-    }
+     }
 }
+
 
 
 /*
@@ -59,7 +62,7 @@ class tickets {
 */
 
 //CODE HERE
-let firstTicket  = new tickets
+let firstTicket  = new Tickets(0,'12:30',1)
 
 /*
     Call the `updateStatus` method on
@@ -68,3 +71,4 @@ let firstTicket  = new tickets
 */
 
 //CODE HERE
+console.log([...firstTicket.updateStatus()])

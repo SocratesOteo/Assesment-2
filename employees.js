@@ -20,12 +20,15 @@
 */
 
 //CODE HERE
-class employee {
+class Employee {
     constructor (name,shifts){
-        function getSchedule(){
-            console.log(`${name} works on ${shifts}`)
-        }
+        this.name
+        this.shifts
     }
+     getSchedule(){
+            console.log(`${this.name} works on ${this.shifts}`)
+        }
+    
 }
 
 
@@ -40,15 +43,16 @@ class employee {
 */
 
 //CODE HERE
-let empOne = new employee(adam,'3 days a week')
+let empOne = new Employee('adam','3 days a week')
 
 /*
-    Call the `getSchedule` method on the
-    `empOne` object.
+Call the `getSchedule` method on the
+`empOne` object.
 */
 
 //CODE HERE
-console.log([...empOne.getSchedule()])
+empOne.getSchedule()
+//console.log([...empOne.getSchedule()])
 
 /*
     Make a copy of the empOne object
@@ -63,6 +67,8 @@ console.log([...empOne.getSchedule()])
 */
 
 //CODE HERE
+const empTwo ={...empOne,name:'nick'}
+console.log(empTwo)
 
 
 
@@ -91,15 +97,18 @@ console.log([...empOne.getSchedule()])
 
 //CODE HERE
 let empArr = []
-class manager {
+class Manager extends Employee{
     constructor(name,shifts,employees){
-    function getEmployees(){
-        console.log(`${name} manages ${employees}`)
+        super(name,shifts)
+    this.employees = employees
     }
-    function addEmployee(emp){
+    
+     getEmployees(){
+        console.log(`${this.name} manages ${this.employees}`)
+    }
+     addEmployee(emp){
         empArr.push(emp)
 
-    }
     }
 }
 
@@ -116,7 +125,7 @@ class manager {
 */
 
 //CODE HERE
-let manager = new manager(name,shifts,empArr)
+let manager = new Manager('tom','friday-death',[])
 
 /*
     Call the `getEmployees` method on the
